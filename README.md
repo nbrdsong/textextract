@@ -7,7 +7,7 @@ Two-stage text extraction for images, including multi-page .pdf files or single 
 
 Outputs are merged into a single R data file (`.rds`) for easy comparison/results validation.
 
-I created this out of a need to extract text data from document scans saved as images, such as those that are often produced by government agencies in response to public records requests. This helps solve the issue of extracting quality text data from messy documents. Tesseract tends to work far better than Adobe OCR, but even small, open-source LLMs run locally on a machine often outperform Tesseract for lower quality scans, handwritten notes, or in accurately representing proper nouns not found in Tesseract's lexicon. This uses both methods with one tool, which simplifies results validation, while allowing for users to customize the particular model and settings based on the particular use-case.
+I created this out of a need to extract text data from document scans saved as images, such as those that are often produced by government agencies in response to public records requests. This helps solve the issue of extracting quality text data from messy documents. Tesseract tends to work far better than Adobe OCR, but even small, open-source LLMs run locally on a machine often outperform Tesseract for lower quality scans, handwritten notes, and in accurately representing proper nouns not found in Tesseract's lexicon. This uses both methods with one tool, which simplifies results validation, while allowing for users to customize the particular model and settings based on the particular use-case.
 
 ---
 
