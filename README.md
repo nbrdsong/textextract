@@ -3,7 +3,7 @@
 Two-stage text extraction for images, including multi-page .pdf files or single image files. It runs two extraction paths:
 
 - **Tesseract**: great for printed text; tries embedded PDF text first. Fast and deterministic.
-- **Vision LLM via Ollama**: sends rendered pages/images to a local vision model for transcription. Slower but better for handwriting or other contexts where traditional OCR struggles.
+- **Vision LLM via Ollama**: sends rendered pages/images to a local (private, secure, and costless) vision model for transcription. Slower but better for handwriting or other contexts where traditional OCR struggles.
 
 Outputs are merged into a single R data file (`.rds`) for easy comparison/results validation.
 
