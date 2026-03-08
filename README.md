@@ -3,11 +3,11 @@
 Two-stage text extraction for images, including multi-page .pdf files or single image files. It runs two extraction paths:
 
 - **Tesseract**: great for printed text; tries embedded PDF text first. Fast and deterministic.
-- **Vision LLM via Ollama**: sends rendered pages/images to a local (private, secure, and costless) vision model for transcription. Slower but better for handwriting or other contexts where traditional OCR struggles.
+- **Vision LLM via Ollama**: sends rendered pages/images to a local vision model for transcription. Slower but better for handwriting or other contexts where traditional OCR struggles.
 
 Outputs are merged into a single R data file (`.rds`) for easy comparison/results validation.
 
-I created this out of a need to extract text data from poor quality scans of documents, such as those that are often produced by government agencies in response to public records requests (scans of printouts with random creases, blotches, coffee stains, other artifacts, handwritten notation, inconsistent document structure, etc.). Tesseract tends to perform far better than Adobe OCR, but even small, open-source LLMs run locally will typically outperform Tesseract for noisy scans, handwritten notes, and in accurately capturing proper nouns not in a predefined lexicon. This uses both methods with one tool, which simplifies validation and allows users to customize the model and settings based on use-case. It worked for me better than anything I could find at the time.
+I created this out of a need to extract text data from poor quality scans of documents, such as those that are often produced by government agencies in response to public records requests (scans of printouts with random creases, blotches, coffee stains, other artifacts, handwritten notation, inconsistent document structure, etc.). Tesseract tends to perform far better than Adobe OCR, but even small, open-source LLMs run locally will typically outperform Tesseract for noisy scans, handwritten notes, and in accurately capturing proper nouns not in a predefined lexicon. This uses both methods with one tool, which simplifies validation and allows users to customize the model and settings based on use-case. It is setup to work with a local model installed on-device, which is costless, secure, private, and avoids ethical concerns about supporting large genAI data centers (if you have them). It worked for me.
 
 ---
 
